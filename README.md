@@ -1,4 +1,5 @@
 # Documento Técnico Oficial: Arquitetura Integrada de Aplicação e Infraestrutura da Dra. Jô, Assistente Virtual da SoluBio
+Grupo 26 - Entrega 13/11/2024
 
 ## 1. Introdução
 Este documento detalha a arquitetura integrada da aplicação e da infraestrutura para a Dra. Jô, assistente virtual da SoluBio. A Dra. Jô foi desenvolvida para oferecer suporte ao cliente, consultar informações no sistema SAP e fornecer uma experiência de atendimento escalável, segura e eficiente. A arquitetura está hospedada na AWS e foi projetada para garantir alta disponibilidade, escalabilidade e conformidade com as regulamentações de segurança e privacidade (LGPD).
