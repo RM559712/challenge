@@ -1,8 +1,7 @@
-
 # Documento Técnico Oficial: Arquitetura Integrada de Aplicação e Infraestrutura da Dra. Jô, Assistente Virtual da SoluBio
 
 ## 1. Introdução
-Este documento detalha a arquitetura integrada da aplicação e da infraestrutura para a Dra. Jô, assistente virtual da SoluBio. A Dra. Jô foi desenvolvida para oferecer suporte ao cliente, consultar informações no sistema SAP, e fornecer uma experiência de atendimento escalável, segura e eficiente. A arquitetura está hospedada na AWS e foi projetada para garantir alta disponibilidade, escalabilidade e conformidade com as regulamentações de segurança e privacidade (LGPD).
+Este documento detalha a arquitetura integrada da aplicação e da infraestrutura para a Dra. Jô, assistente virtual da SoluBio. A Dra. Jô foi desenvolvida para oferecer suporte ao cliente, consultar informações no sistema SAP e fornecer uma experiência de atendimento escalável, segura e eficiente. A arquitetura está hospedada na AWS e foi projetada para garantir alta disponibilidade, escalabilidade e conformidade com as regulamentações de segurança e privacidade (LGPD).
 
 ## 2. Objetivo e Escopo
 O objetivo da Dra. Jô é oferecer suporte rápido e eficiente aos clientes da SoluBio, permitindo o acesso a informações específicas no SAP. O chatbot atende às áreas de **Serviços Financeiros**, **Suporte da Eficiência Agronômica**, **Suporte da Qualidade Onfarm**, **Suporte da Engenharia**, e **Suporte Comercial**, fornecendo respostas diretas para consultas frequentes e informações relevantes para cada setor.
@@ -91,14 +90,17 @@ Cada elemento desempenha uma função específica para garantir o atendimento ao
 - **CloudWatch e GuardDuty**: Monitoramento de atividades e segurança.
 
 ## 9. Estimativa de Custos
-Abaixo estão os custos estimados para cada serviço:
 
-- **LLM da OpenAI**: Custos variáveis baseados no uso de tokens.
-- **AWS Lambda**: Preço por chamadas e tempo de execução.
-- **DynamoDB e RDS**: Custos de armazenamento e consultas.
-- **API Gateway**: Tarifas baseadas no número de requisições.
-- **CloudWatch e GuardDuty**: Baseado em volume de logs e monitoramento.
-- **Amazon S3**: Armazenamento e backup com limites gratuitos iniciais.
+| Serviço           | Custo Estimado                                                 | Fonte                                                                                        |
+|-------------------|-----------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| **LLM da OpenAI** | \$0,06 por 1k tokens usados                                    | [OpenAI Pricing](https://openai.com/pricing)                                                |
+| **AWS Lambda**    | \$0,20 por 1M de solicitações + \$0,00001667 por GB/segundo     | [AWS Lambda Pricing](https://aws.amazon.com/lambda/pricing/)                                |
+| **DynamoDB**      | \$1,25 por unidade de leitura/gravação mensal                  | [DynamoDB Pricing](https://aws.amazon.com/dynamodb/pricing/)                                |
+| **Amazon RDS**    | \$0,10 por hora para instância db.t2.micro                     | [RDS Pricing](https://aws.amazon.com/rds/pricing/)                                          |
+| **API Gateway**   | \$3,50 por 1M de chamadas de API recebidas                     | [API Gateway Pricing](https://aws.amazon.com/api-gateway/pricing/)                          |
+| **CloudWatch**    | \$0,30 por GB de dados coletados                               | [CloudWatch Pricing](https://aws.amazon.com/cloudwatch/pricing/)                            |
+| **GuardDuty**     | \$1,00 por 1M de eventos analisados                            | [GuardDuty Pricing](https://aws.amazon.com/guardduty/pricing/)                              |
+| **Amazon S3**     | \$0,023 por GB para o primeiro terabyte por mês                | [S3 Pricing](https://aws.amazon.com/s3/pricing/)                                            |
 
 ## 10. Fluxo Integrado: Arquitetura de Aplicação e Infraestrutura
 
@@ -111,3 +113,5 @@ Abaixo estão os custos estimados para cada serviço:
 
 ## 11. Conclusão
 A arquitetura integrada entre a aplicação e infraestrutura oferece uma solução robusta, escalável e em conformidade com a LGPD. A Dra. Jô, assistente virtual da SoluBio, está equipada para oferecer suporte eficiente e personalizado, com segurança e desempenho, pronta para evoluir conforme o crescimento do volume de interações.
+
+## 12. Arquivo com a [topologia](https://github.com/RM559712/challenge/blob/main/topologia/Dra_Jo_Solubio.drawio)
