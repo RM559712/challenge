@@ -1,4 +1,4 @@
-Grupo 26 - Entrega 13/11/2024 - Sprint 1 - Solubio
+Grupo 25 - Entrega 13/11/2024 - Sprint 1 - Solubio
 # Documento Técnico Oficial: Arquitetura Integrada de Aplicação e Infraestrutura da Dra. Jô, Assistente Virtual da SoluBio
 
 ## 1. Introdução
